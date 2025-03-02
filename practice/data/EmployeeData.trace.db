@@ -1,0 +1,9 @@
+2025-03-01 09:26:45.446692+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEETABLE" not found (this database is empty); SQL statement:
+select e1_0.id,e1_0.department,e1_0.email,e1_0.name from employeetable e1_0 [42104-232]
+2025-03-01 09:28:28.455999+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEETABLE" not found (this database is empty); SQL statement:
+select e1_0.id,e1_0.department,e1_0.email,e1_0.name from employeetable e1_0 [42104-232]
+2025-03-01 09:29:31.239701+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEETABLE" not found (this database is empty); SQL statement:
+insert into employeetable (department,email,name,id) values (?,?,?,default) [42104-232]

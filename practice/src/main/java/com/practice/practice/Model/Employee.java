@@ -8,37 +8,39 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="USERTABLE")
-public class User {
+@Table(name="EMPLOYEETABLE")
+public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long userId;
+	private Long Id;
 
-	@Column(name="USER_NAME",nullable=false)
+	@Column(nullable=false)
 	private String name;
 	
-	@Column(name="EMAIL_ID",nullable=false)
+	@Column(unique=true)
 	private String email;
+	
+	private String department;
 
-	
-	public User() {
-	
-	}
-	
-	public User(Long userId, String name, String email) {
+	public Employee() {
 		super();
-		this.userId = userId;
+	}
+
+	public Employee(Long id, String name, String email, String department) {
+		super();
+		Id = id;
 		this.name = name;
 		this.email = email;
+		this.department = department;
 	}
 
-	public Long getUserId() {
-		return userId;
+	public Long getId() {
+		return Id;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setId(Long id) {
+		Id = id;
 	}
 
 	public String getName() {
@@ -56,9 +58,14 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", name=" + name + ", email=" + email + "]";
+
+	public String getDepartment() {
+		return department;
 	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	
 }
